@@ -1,4 +1,4 @@
-# ArKnights-Operator-Data
+# arknights-operator-data
 
 Project from our college to make a website that use React.js and Tailwind
 
