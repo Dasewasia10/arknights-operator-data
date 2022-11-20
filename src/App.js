@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import First from "./components/First";
 
 function App() {
   //const clickMe = (name) => {
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <First />
     </div>
   );
 }
