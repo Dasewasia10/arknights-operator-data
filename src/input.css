@@ -8,5 +8,6 @@
 		min-w-full
 		h-32
 		min-h-full
-		rounded-xl;
+		rounded-xl
+		shadow-lg ;
 }
