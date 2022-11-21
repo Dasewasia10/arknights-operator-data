@@ -1,9 +1,9 @@
-const PilihKarakter = () => {
+const DetailKarakter = () => {
     return (
       <div class="">
       </div>
     );
   };
   
-  export default PilihKarakter;
+  export default DetailKarakter;
   

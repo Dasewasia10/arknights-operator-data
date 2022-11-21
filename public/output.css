@@ -559,6 +559,34 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-40 {
+  top: 10rem;
+}
+
+.bottom-40 {
+  bottom: 10rem;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -567,16 +595,16 @@ video {
   margin: 5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .mb-5 {
@@ -623,6 +651,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
@@ -654,8 +686,22 @@ video {
   background-color: rgb(13 13 13 / var(--tw-bg-opacity));
 }
 
+.object-center {
+  object-position: center;
+}
+
 .p-2 {
   padding: 0.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-2 {
@@ -675,14 +721,19 @@ video {
   font-family: Crimson;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-\[\#D9D9D9\] {
@@ -696,12 +747,19 @@ video {
   min-width: 100%;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
+  color: rgb(13 13 13 / var(--tw-text-opacity));
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.box:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 4 64 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(217 217 217 / var(--tw-text-opacity));
 }
 
 .hover\:border-\[\#010440\]:hover {

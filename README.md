@@ -12,3 +12,10 @@ Additional APIs (For Logo and Operator Icon) =
 - https://dasewasia10.github.io/AKLogo-Addition/data/operator_icon.json
 - https://dasewasia10.github.io/AKLogo-Addition/data/faction.json
 - https://dasewasia10.github.io/AKLogo-Addition/data/class.json
+
+Feature on plan :
+- Filtering
+- Searching
+- Fetch Data (like information about Operator)
+- Sorting
+- Favorit

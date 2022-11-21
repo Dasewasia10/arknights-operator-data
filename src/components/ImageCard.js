@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ImageCard extends Component {
   constructor(props) {
@@ -40,7 +41,14 @@ class ImageCard extends Component {
   render() {
     const { operator_icon, faction, opclass } = this.state;
     return (
-      <div class="m-20">
+      <div class="mx-20 my-10">
+        <div>
+          <Link to="/">
+            <p class="mt-5 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+              {"< "}Kembali
+            </p>
+          </Link>
+        </div>
         <p class="mt-20 mb-5 text-center">Operator Icon</p>
         <div class="grid overflow-hidden grid-lines grid-cols-4 auto-rows-auto gap-5">
           {operator_icon.map((item, index) => (

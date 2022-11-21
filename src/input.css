@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 .box {
-  @apply bg-indigo-700
-		text-gray-100
+  @apply bg-[#D9D9D9]
+		text-[#0D0D0D]
+		hover:bg-[#010440]
+		hover:text-[#D9D9D9]
 		min-w-full
 		h-32
 		min-h-full
 		rounded-xl
-		shadow-lg ;
+		shadow-lg;
 }

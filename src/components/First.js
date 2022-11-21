@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const First = () => {
   return (
-    <div class="flex mt-20">
+    <div class="flex mt-10">
       <div class="flex-col m-auto">
         <img
           class="h-64 m-auto"
@@ -15,11 +17,13 @@ const First = () => {
         <p class="mt-2 m-auto text-center text-4xl">
           Informasi dan Data Operator
         </p>
-        <a href="https://arknights.global" target="_blank" rel="noreferrer">
-          <p class="mt-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
-            Tekan di sini
-          </p>
-        </a>
+        <div class="flex flex-col m-auto px-10 py-4 justify-center items-center object-center">
+          <Link to="imagecard">
+            <p class="mt-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+              Mulai dari Sini!
+            </p>
+          </Link>
+        </div>
       </div>
     </div>
   );
