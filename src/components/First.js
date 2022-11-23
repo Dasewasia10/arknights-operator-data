@@ -18,7 +18,7 @@ const First = () => {
           Informasi dan Data Operator
         </p>
         <div class="flex flex-col m-auto px-10 py-4 justify-center items-center object-center">
-          <Link to="imagecard">
+          <Link to="detailimagecard">
             <p class="mt-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
               Mulai dari Sini!
             </p>
