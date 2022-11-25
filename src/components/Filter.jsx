@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = () => {
+const Filter = () => {
   return (
     <form class="max-w-sm px-4">
       <div class="relative">
@@ -28,4 +28,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Filter;
