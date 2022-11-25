@@ -3,8 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import First from "./page/First";
 import ChooseMenu from "./page/ChooseMenu";
-import DetailImageCard from "./page/DetailImageCard";
-import GalleryImageCard from "./page/GalleryImageCard";
+import Card from "./page/Card";
 import DetailOperator from "./page/DetailOperator";
 import SkinOperator from "./page/SkinOperator";
 
@@ -14,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<First />} />
         <Route path="choosemenu" element={<ChooseMenu />} />
-        <Route path="detailimagecard" element={<DetailImageCard />} />
-        <Route path="galleryimagecard" element={<GalleryImageCard />} />
+        <Route path="detailimagecard" element={<Card />} />
+        <Route path="galleryimagecard" element={<Card />} />
         <Route path="detailimagecard/:id" element={<DetailOperator />} />
         <Route path="galleryimagecard/:id" element={<SkinOperator />} />
       </Routes>
