@@ -18,24 +18,24 @@ const ChooseMenu = () => {
           Informasi dan Data Operator
         </p>
         <div class="flex flex-row gap-20 mt-10 mx-auto px-5 py-4 justify-center items-center object-center">
-          <Link to="/detailimagecard">
+          <Link to="/detail">
             <div class="box text-center items-center flex flex-row">
               <img
                 class="h-72 hover:h-80 w-auto rounded-2xl"
                 src="https://gamepress.gg/arknights/sites/arknights/files/2020-01/char_002_amiya_winter%231_1.png"
                 alt="biografioperator"
               />
-              <p class="flex pr-5 text-2xl justify-center">Biografi Operator</p>
+              <p class="flex px-5 text-2xl justify-center">Biografi Operator</p>
             </div>
           </Link>
-          <Link to="/galleryimagecard">
+          <Link to="/gallery">
             <div class="box text-center items-center flex flex-row">
               <img
                 class="h-72 hover:h-80 w-auto rounded-2xl"
                 src="https://gamepress.gg/arknights/sites/arknights/files/2020-05/char_113_cqbw_1.png"
                 alt="galeriskin"
               />
-              <p class="flex pr-5 text-2xl justify-center">Galeri Skin</p>
+              <p class="flex px-5 text-2xl justify-center">Galeri Skin</p>
             </div>
           </Link>
         </div>

@@ -13,10 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<First />} />
         <Route path="choosemenu" element={<ChooseMenu />} />
-        <Route path="detailimagecard" element={<Card />} />
-        <Route path="galleryimagecard" element={<Card />} />
-        <Route path="detailimagecard/:id" element={<DetailOperator />} />
-        <Route path="galleryimagecard/:id" element={<SkinOperator />} />
+        <Route path="detail" element={<Card />} />
+        <Route path="gallery" element={<Card />} />
+        <Route path="detail/:id" element={<DetailOperator />} />
+        <Route path="gallery/:id" element={<SkinOperator />} />
       </Routes>
     </div>
   );

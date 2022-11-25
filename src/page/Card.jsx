@@ -10,9 +10,8 @@ const Card = () => {
 
       const data = await response.json();
 
-      const pageSize = 12;
-      const page = 1;
-      const pageData = data.slice(page * pageSize - pageSize, page * pageSize);
+      const pageSize = 20;
+      const pageData = data.slice(0, pageSize);
 
       setOperator(pageData);
     };
@@ -22,14 +21,14 @@ const Card = () => {
 
   return (
     <div class="relative mx-20 my-10">
-      <div class="absolute">
+      <div class="">
         <img
           class="mx-auto w-auto h-16 ml-10"
           src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
           alt="Arknights_White_Logo"
         />
       </div>
-      <div class="absolute flex flex-row mt-28 mb-10" id="kembali">
+      <div class="flex flex-row my-10" id="kembali">
         <Link to="/choosemenu">
           <p
             class="text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]"
@@ -40,11 +39,11 @@ const Card = () => {
         </Link>
       </div>
 
-      <div class="absolute mt-48">
+      <div class="my-10">
         <p>Newest Operator</p>
       </div>
 
-      <div class="absolute grid mt-60 mb-24 content-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5">
+      <div class="my-32 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5">
         {operator.map((operator, index) => (
           <Link to={{ pathname: `${operator._id}` }}>
             <div
@@ -53,11 +52,12 @@ const Card = () => {
               title={operator.name}
             >
               <img
-                class="py-2 h-36 w-auto rounded-2xl"
+                class="py-2 h-36 hover:h-40 w-auto"
                 src={operator.art.Base}
                 alt={operator.name}
+                title={operator.name}
               />
-              <p class="flex pl-3 pr-3 text-center">{operator.name}</p>
+              <p class="flex px-3 pr-3 text-center">{operator.name}</p>
             </div>
           </Link>
         ))}
