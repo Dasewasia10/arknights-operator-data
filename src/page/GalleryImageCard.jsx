@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const GalleryImageCard = () => {
+const DetailImageCard = () => {
   const [operator, setOperator] = useState([]);
   //const currentPage = 1;
   //const todosPerPage = 12;
@@ -22,15 +22,22 @@ const GalleryImageCard = () => {
     <div class="relative mx-20 my-10">
       <div>
         <Link to="/choosemenu">
-          <p class="absolute mt-5 mb-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
-            {"< "}Kembali
+          <p
+            class="absolute mt-5 mb-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]"
+            title="Kembali"
+          >
+            {"< "}
           </p>
         </Link>
       </div>
       <div class="absolute grid mt-40 overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5">
         {operator.map((operator, index) => (
           <Link to={{ pathname: `${operator._id}` }}>
-            <div class="box text-center items-center flex flex-row" key={index}>
+            <div
+              class="box text-center items-center flex flex-row"
+              key={index}
+              title={operator.name}
+            >
               <img
                 class="py-2 h-36 w-auto rounded-2xl"
                 src={operator.art.Base}
@@ -44,4 +51,4 @@ const GalleryImageCard = () => {
     </div>
   );
 };
-export default GalleryImageCard;
+export default DetailImageCard;

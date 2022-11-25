@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const First = () => {
   return (
-    <div class="flex mt-10">
+    <div class="flex mt-10 bg-gradient-to-r from-[#0D0D0D] to-[#D9D9D9]">
       <div class="flex-col m-auto">
         <img
           class="h-64 mx-auto"
