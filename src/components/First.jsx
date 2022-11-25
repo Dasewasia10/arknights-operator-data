@@ -5,12 +5,12 @@ const First = () => {
     <div class="flex mt-10">
       <div class="flex-col m-auto">
         <img
-          class="h-64 m-auto"
+          class="h-64 mx-auto"
           src="https://github.com/Aceship/Arknight-Images/blob/main/factions/logo_rhodes.png?raw=true"
           alt="logo_rhodes"
         />
         <img
-          class="m-auto"
+          class="mx-auto"
           src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
           alt="Arknights_White_Logo"
         />
