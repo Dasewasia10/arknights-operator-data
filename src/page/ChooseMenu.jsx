@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ChooseMenu = () => {
   return (
-    <div class="flex mt-5 bg-gradient-to-r from-[#0D0D0D] to-[#D9D9D9]">
+    <div class="flex mt-5 bg-gradient-to-b from-[#D9D9D9] via-[#0D0D0D] to-[#D9D9D9]">
       <div class="flex-col m-auto">
         <img
           class="h-48 m-auto"

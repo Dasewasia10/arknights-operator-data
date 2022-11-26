@@ -21,9 +21,9 @@ const Card = () => {
 
   return (
     <div class="relative mx-20 my-10">
-      <div class="">
+      <div class="ml-10">
         <img
-          class="mx-auto w-auto h-16 ml-10"
+          class="w-auto h-16"
           src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
           alt="Arknights_White_Logo"
         />
@@ -43,7 +43,7 @@ const Card = () => {
         <p>Newest Operator</p>
       </div>
 
-      <div class="my-32 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5">
+      <div class="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5">
         {operator.map((operator, index) => (
           <Link to={{ pathname: `${operator._id}` }}>
             <div
