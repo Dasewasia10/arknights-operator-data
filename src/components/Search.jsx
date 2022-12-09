@@ -6,7 +6,7 @@ const Search = ({ state, setSearchResults }) => {
     const handleSearchChange = (e) => {
         if (!e.target.value) return setSearchResults(state)
 
-        const resultArray = state.filter(state => state.name.toLowerCase().includes(e.target.value) || state._id.includes(e.target.value))
+        const resultArray = state.filter(state => state.name.toLowerCase().includes(e.target.value) || state._id.toUpperCase().includes(e.target.value))
         
         setSearchResults(resultArray)
     }
