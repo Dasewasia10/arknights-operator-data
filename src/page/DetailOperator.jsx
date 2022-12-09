@@ -34,18 +34,18 @@ const DetailOperator = () => {
   console.log(operator);
 
   return (
-    <div class="mx-20 my-10">
-      <h1 class="mb-10">Link to this page : {window.location.pathname}</h1>
+    <div className="mx-20 my-10">
+      <h1 className="mb-10">Link to this page : {window.location.pathname}</h1>
       <div>
         <div>
           <img
-            class="m-auto"
+            className="m-auto"
             src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
             alt="Arknights_White_Logo"
           />
         </div>
-        <Link to="/detailimagecard">
-          <p class="absolute bottom-5 mt-5 mb-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+        <Link to="/detail">
+          <p className="absolute bottom-5 mt-5 mb-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
             {"< "}Kembali
           </p>
         </Link>

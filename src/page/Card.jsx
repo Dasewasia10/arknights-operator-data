@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getData } from "../api/axios";
+import Search from "../components/Search";
+import ListOperator from "../components/ListOperator";
 
 const Card = () => {
-  const [operator, setOperator] = useState([]);
+  const [state, setState] = useState([])
+  const [searchResult, setSearchResults] = useState([])
 
-  useEffect(() => {
-    const fetchReq1 = async () => {
-      const response = await fetch(`https://rhodesapi.cyclic.app/api/operator`);
-
-      const data = await response.json();
-
-      const pageSize = 20;
-      const pageData = data.slice(0, pageSize);
-
-      setOperator(pageData);
-    };
-
-    fetchReq1();
-  }, []);
+   useEffect(() => {
+    getData().then(json => {
+      setState(json)
+      return json
+    }).then(json => {
+      setSearchResults(json)
+    })
+   }, [])
 
   return (
     <div class="relative mx-20 my-10">
@@ -43,25 +41,10 @@ const Card = () => {
         <p>Newest Operator</p>
       </div>
 
-      <div class="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5">
-        {operator.map((operator, index) => (
-          <Link to={{ pathname: `${operator._id}` }}>
-            <div
-              class="box text-center items-center flex flex-row"
-              key={index}
-              title={operator.name}
-            >
-              <img
-                class="py-2 h-36 hover:h-40 w-auto"
-                src={operator.art.Base}
-                alt={operator.name}
-                title={operator.name}
-              />
-              <p class="flex px-3 pr-3 text-center">{operator.name}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <Search state={state} setSearchResults={setSearchResults} />
+      <ListOperator class="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5" searchResult={searchResult} />
+
+      
     </div>
   );
 };

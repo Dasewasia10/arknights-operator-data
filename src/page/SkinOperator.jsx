@@ -20,18 +20,18 @@ const SkinOperator = () => {
   console.log(operator);
 
   return (
-    <div class="mx-20 my-10">
-      <h1 class="mb-10">Link to this page : {window.location.pathname}</h1>
+    <div className="mx-20 my-10">
+      <h1 className="mb-10">Link to this page : {window.location.pathname}</h1>
       <div>
         <div>
           <img
-            class="absolute mx-auto left-20 w-auto h-24 top-10"
+            className="absolute mx-auto left-20 w-auto h-24 top-10"
             src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
             alt="Arknights_White_Logo"
           />
         </div>
-        <Link to="/galleryimagecard">
-          <p class="absolute bottom-5 mt-5 mb-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+        <Link to="/gallery">
+          <p className="absolute bottom-5 mt-5 mb-10 text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
             {"< "}Kembali
           </p>
         </Link>
@@ -39,9 +39,9 @@ const SkinOperator = () => {
           operator.map((op) => {
             if (op._id === id) {
               return (
-                <div class="flow-root">
+                <div className="flow-root">
                   <div
-                    class="float-left grid grid-rows-3 grid-cols-2"
+                    className="float-left grid grid-rows-3 grid-cols-2"
                     id="list-of-skin"
                   >
                     {Object.entries(op.art).map(([key]) => {
@@ -55,9 +55,9 @@ const SkinOperator = () => {
                   </div>
                   {Object.entries(op.art).map(([key, value]) => {
                     return (
-                      <div class="relative flex flex-row-reverse float-right" id="gambar">
+                      <div className="relative flex flex-row-reverse float-right" id="gambar">
                         <img
-                          class="w-96 h-auto"
+                          className="w-96 h-auto"
                           key={key}
                           src={value}
                           alt="artBase"
