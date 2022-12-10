@@ -37,6 +37,10 @@ const Card = () => {
         </Link>
       </div>
 
+      <div class="my-10">
+        <p>Newest Operator</p>
+      </div>
+
       <Search state={state} setSearchResults={setSearchResults} />
       <ListOperator class="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5" searchResult={searchResult} />
 
