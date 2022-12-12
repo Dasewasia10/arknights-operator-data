@@ -2,8 +2,8 @@ import DetailCard from "./DetailCard"
 import { Link } from "react-router-dom";
 
 
-const ListOperator = ({ searchResult}) => {
-    const results = searchResult.map(data => (<Link to={{ pathname: `${data._id}` }}> <DetailCard data={data} key={data._id}  /> </Link>))
+const ListOperator = ({ searchResult, limit}) => {
+    const results = searchResult.slice(0, limit).map(data => (<Link to={{ pathname: `${data._id}` }}> <DetailCard data={data} key={data._id}  /> </Link>))
 
     const content = results?.length ? results : <div><p>No Matching Data</p></div>
   return (
