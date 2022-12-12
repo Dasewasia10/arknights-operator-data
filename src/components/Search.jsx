@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import debounce from 'lodash.debounce'
 
 const Search = ({ state, setSearchResults }) => {
     const handleSubmit = (e) => e.preventDefault()
@@ -7,9 +8,10 @@ const Search = ({ state, setSearchResults }) => {
         if (!e.target.value) return setSearchResults(state)
 
         const resultArray = state.filter(state => state.name.toLowerCase().includes(e.target.value) || state._id.toUpperCase().includes(e.target.value) || state.name.includes(e.target.value))
-        
+
         setSearchResults(resultArray)
     }
+    const debounceOnchange = debounce(handleSearchChange, 500)
     return (
         <header>
             <form className='search' onSubmit={handleSubmit}>
@@ -17,7 +19,7 @@ const Search = ({ state, setSearchResults }) => {
                     className='search_input'
                     type="text"
                     id="search"
-                    onChange={handleSearchChange}
+                    onChange={debounceOnchange}
                 />
             </form>
         </header>
