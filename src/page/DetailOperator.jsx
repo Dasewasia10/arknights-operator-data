@@ -13,7 +13,7 @@ const DetailOperator = () => {
 
     if (rarity._id === id) {
       for (let i = 0; i < rarity.rarity; i++) {
-        stars.push(<img class="w-9 h-auto" key={i} src={star} alt="star" />);
+        stars.push(<img class="w-7 h-auto" key={i} src={star} alt="star" />);
       }
       return stars;
     }
