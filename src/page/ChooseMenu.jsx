@@ -22,17 +22,19 @@ const ChooseMenu = () => {
             <div className="box text-center items-center flex flex-row">
               <img
                 className="h-72 hover:h-80 w-auto rounded-2xl"
-                src="https://gamepress.gg/arknights/sites/arknights/files/2020-01/char_002_amiya_winter%231_1.png"
+                src="https://gamepress.gg/arknights/sites/arknights/files/2020-05/char_113_cqbw_1.png"
                 alt="biografioperator"
               />
-              <p className="flex px-5 text-2xl justify-center">Biografi Operator</p>
+              <p className="flex px-5 text-2xl justify-center">
+                Biografi Operator
+              </p>
             </div>
           </Link>
           <Link to="/gallery">
             <div className="box text-center items-center flex flex-row">
               <img
                 className="h-72 hover:h-80 w-auto rounded-2xl"
-                src="https://gamepress.gg/arknights/sites/arknights/files/2020-05/char_113_cqbw_1.png"
+                src="https://gamepress.gg/arknights/sites/arknights/files/2020-01/char_002_amiya_winter%231_1.png"
                 alt="galeriskin"
               />
               <p className="flex px-5 text-2xl justify-center">Galeri Skin</p>
