@@ -18,4 +18,4 @@ Feature on plan :
 - Searching
 - Fetch Data (like information about Operator)
 - Sorting
-- Favorite
+~- Favorite~

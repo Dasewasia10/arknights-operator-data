@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 const First = () => {
   return (
     <div className="flex mt-10 bg-gradient-to-b from-[#0D0D0D] via-[#D9D9D9] to-[#0D0D0D]">
-      <div className="flex-col m-auto">
+      <div className="flex flex-col mx-auto">
         <img
           className="h-64 mx-auto"
           src="https://github.com/Aceship/Arknight-Images/blob/main/factions/logo_rhodes.png?raw=true"
           alt="logo_rhodes"
         />
         <img
-          className="mx-auto"
+          className="h-24 lg:h-auto mx-auto"
           src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
           alt="Arknights_White_Logo"
         />
-        <p className="mt-4 mx-auto text-center text-4xl">
+        <p className="mt-4 mx-20 text-center text-2xl lg:text-4xl">
           Informasi dan Data Operator
         </p>
         <div className="flex flex-col m-auto px-10 py-4 justify-center items-center object-center">

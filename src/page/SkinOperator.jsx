@@ -46,8 +46,10 @@ const SkinOperator = () => {
                   >
                     {Object.entries(op.art).map(([key, value]) => {
                       return (
-                        <div class="skin" href={value}>
-                          <p>{key}</p>
+                        <div id="opskin">
+                          <a href={value}>
+                            <p>{key}</p>
+                          </a>
                           <br />
                         </div>
                       );

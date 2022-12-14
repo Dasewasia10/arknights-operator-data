@@ -34,9 +34,12 @@ const DetailOperator = () => {
   console.log(operator);
 
   return (
-    <div className="mx-20 mt-10">
+    <div className="mx-5 lg:mx-20 mt-10">
       <div>
-        <div id="arknightslogo" className="flex fixed mt-5 mb-10 top-2">
+        <div
+          id="arknightslogo"
+          className="flex relative lg:fixed mt-5 mb-10 top-2 items-center justify-center lg:justify-start"
+        >
           <img
             className="w-auto h-24"
             src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
@@ -44,8 +47,8 @@ const DetailOperator = () => {
           />
         </div>
         <Link to="/detail">
-          <div className="flex fixed mt-5 mb-10 bottom-2">
-            <p className="text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+          <div className="flex fixed mb-10 bottom-2">
+            <p className="text-center text-lg lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
               {"< "}Kembali
             </p>
           </div>
@@ -55,12 +58,12 @@ const DetailOperator = () => {
             if (op._id === id) {
               return (
                 <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row">
-                  <div id="detailgambar">
+                  <div id="detailgambar" className="flex lg:items-center">
                     <img src={op.art.Base} alt="artBase" />
                   </div>
                   <div
                     id="detaildata"
-                    className="w-[120rem] h-[34rem] overflow-y-auto mt-2 border-4 border-[#D9D9D9] rounded-2xl p-2"
+                    className="w-auto lg:w-[120rem] lg:h-[34rem] overflow-y-auto mt-2 mb-28 lg:mb-0 border-4 border-[#D9D9D9] rounded-2xl p-2 text-md lg:text-lg"
                   >
                     <div id="name-rarity">
                       <div className="flex flex-row items-center gap-2 mb-4">
