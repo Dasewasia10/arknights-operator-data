@@ -1,13 +1,15 @@
-import React from 'react';
-import debounce from 'lodash.debounce'
+import React from "react";
+import debounce from "lodash.debounce";
 
 const Search = ({ state, setSearchResults }) => {
-    const handleSubmit = (e) => e.preventDefault()
+  const handleSubmit = (e) => e.preventDefault();
 
-    const handleSearchChange = (e) => {
-        if (!e.target.value) return setSearchResults(state)
+  const handleSearchChange = (e) => {
+    if (!e.target.value) return setSearchResults(state);
 
-        const resultArray = state.filter(state => state.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    const resultArray = state.filter((state) =>
+      state.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
 
         setSearchResults(resultArray)
     }
@@ -40,4 +42,4 @@ const Search = ({ state, setSearchResults }) => {
     )
 }
 
-export default Search
+export default Search;

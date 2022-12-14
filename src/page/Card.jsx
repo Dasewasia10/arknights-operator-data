@@ -5,33 +5,35 @@ import Search from "../components/Search";
 import ListOperator from "../components/ListOperator";
 
 const Card = () => {
-  const [state, setState] = useState([])
-  const [searchResult, setSearchResults] = useState([])
-  const [limit, setLimit] = useState(10)
+  const [state, setState] = useState([]);
+  const [searchResult, setSearchResults] = useState([]);
+  const [limit, setLimit] = useState(10);
 
   const showMoreCards = () => {
     setLimit((prevValue) => prevValue + 10);
-  }
+  };
 
-   useEffect(() => {
-    getData().then(json => {
-      setState(json)
-      return json
-    }).then(json => {
-      setSearchResults(json)
-    })
-   }, [])
+  useEffect(() => {
+    getData()
+      .then((json) => {
+        setState(json);
+        return json;
+      })
+      .then((json) => {
+        setSearchResults(json);
+      });
+  }, []);
 
   return (
     <div className="relative mx-20 my-10">
-      <div className="ml-10">
+      <div className="flex justify-center">
         <img
           className="w-auto h-16"
           src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
           alt="Arknights_White_Logo"
         />
       </div>
-      <div className="flex flex-row my-10" id="kembali">
+      <div className="flex flex-row my-10 justify-center" id="kembali">
         <Link to="/choosemenu">
           <p
             className="text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]"
@@ -40,18 +42,40 @@ const Card = () => {
             {"< "}
           </p>
         </Link>
+        <div className="flex ml-5 items-center">
+          <Search state={state} setSearchResults={setSearchResults} />
+        </div>
+        <div className="flex ml-5 items-center">
+          <p>atau</p>
+        </div>
+        <div className="flex ml-5 items-center">
+          <Search state={state} setSearchResults={setSearchResults} />
+        </div>
+        <div className="flex ml-5 items-center">
+          <p>atau</p>
+        </div>
+        <div className="flex ml-5 items-center">
+          <Search state={state} setSearchResults={setSearchResults} />
+        </div>
       </div>
 
-      
-
-      <Search state={state} setSearchResults={setSearchResults} />
       <div className="my-10">
         <p>Newest Operator</p>
       </div>
-      <ListOperator className="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5" searchResult={searchResult} limit={limit} />
-      <button onClick={showMoreCards}>Load More...</button>
-
-      
+      <ListOperator
+        className="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5"
+        searchResult={searchResult}
+        limit={limit}
+      />
+      <div className="flex justify-center">
+        <button
+          className="text-center text-lg bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]"
+          title="Muat Lebih..."
+          onClick={showMoreCards}
+        >
+          Muat Lebih...
+        </button>
+      </div>
     </div>
   );
 };

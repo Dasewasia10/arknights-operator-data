@@ -44,9 +44,9 @@ const SkinOperator = () => {
                     className="float-left grid grid-rows-3 grid-cols-2"
                     id="list-of-skin"
                   >
-                    {Object.entries(op.art).map(([key]) => {
+                    {Object.entries(op.art).map(([key, value]) => {
                       return (
-                        <div>
+                        <div class="skin" href={value}>
                           <p>{key}</p>
                           <br />
                         </div>
