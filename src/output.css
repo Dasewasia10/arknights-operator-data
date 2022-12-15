@@ -545,24 +545,16 @@ video {
   bottom: 0.5rem;
 }
 
-.left-20 {
-  left: 5rem;
+.top-1\/2 {
+  top: 50%;
 }
 
-.top-10 {
-  top: 2.5rem;
+.left-0 {
+  left: 0px;
 }
 
-.bottom-5 {
-  bottom: 1.25rem;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
+.right-0 {
+  right: 0px;
 }
 
 .m-auto {
@@ -626,8 +618,8 @@ video {
   margin-top: 0.5rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
+.mb-28 {
+  margin-bottom: 7rem;
 }
 
 .mb-4 {
@@ -638,24 +630,12 @@ video {
   margin-top: 1rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mb-28 {
-  margin-bottom: 7rem;
-}
-
 .block {
   display: block;
 }
 
 .flex {
   display: flex;
-}
-
-.flow-root {
-  display: flow-root;
 }
 
 .grid {
@@ -714,6 +694,14 @@ video {
   max-width: 24rem;
 }
 
+.origin-center {
+  transform-origin: center;
+}
+
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
 .auto-rows-auto {
   grid-auto-rows: auto;
 }
@@ -722,8 +710,8 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -740,6 +728,14 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-center {
