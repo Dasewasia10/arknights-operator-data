@@ -30,7 +30,7 @@ const SkinOperator = () => {
           />
         </div>
         <Link to="/gallery">
-          <div className="flex fixed top-20 left-20">
+          <div className="flex fixed top-36 left-20">
             <p className="text-center text-lg lg:text-xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
               {"< "}Kembali
             </p>
@@ -44,20 +44,21 @@ const SkinOperator = () => {
                   id="opskin"
                   className="flex h-screen w-full justify-center"
                 >
-                  <div className="absolute grid grid-cols-3 grid-rows-auto gap-4 mt-32 w-auto h-auto">
+                  <div className="absolute grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-4 mt-32 w-auto h-auto">
                     {Object.entries(op.art).map(([key, value]) => {
                       return (
-                        <div className="text-center text-xl lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
-                          <a href={value}>
-                            <p>{key}</p>
-                          </a>
-                          <br />
-                          <img
-                            className="w-80 h-auto"
-                            key={key}
-                            src={value}
-                            alt="artBase"
-                          />
+                        <div>
+                          <div className="text-center text-xl lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+                            <a href={value} target="_blank">
+                              {key}
+                              <img
+                                className="w-56 md:w-64 lg:w-80 h-auto"
+                                key={key}
+                                src={value}
+                                alt="artBase"
+                              />
+                            </a>
+                          </div>
                         </div>
                       );
                     })}
