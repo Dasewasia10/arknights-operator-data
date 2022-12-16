@@ -53,14 +53,16 @@ const Card = () => {
         <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
           <p>atau</p>
         </div>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <Filter />
-        </div>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <p>atau</p>
-        </div>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <Sort />
+        <div className="flex flex-row items-center justify-center">
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <Sort />
+          </div>
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <p>atau</p>
+          </div>
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <Sort />
+          </div>
         </div>
       </div>
 
