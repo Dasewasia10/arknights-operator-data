@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { getData } from "../api/axios";
 import Search from "../components/Search";
 import ListOperator from "../components/ListOperator";
+import Filter from "../components/Filter";
 
 const Card = () => {
   const [state, setState] = useState([]);
   const [searchResult, setSearchResults] = useState([]);
   const [limit, setLimit] = useState(10);
+  const [filtered, setFiltered] = useState([]);
+  const [activeClass, setActiveClass] = useState('')
 
   const showMoreCards = () => {
     setLimit((prevValue) => prevValue + 10);
@@ -52,12 +55,6 @@ const Card = () => {
         <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
           <Search state={state} setSearchResults={setSearchResults} />
         </div>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <p>atau</p>
-        </div>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <Search state={state} setSearchResults={setSearchResults} />
-        </div>
       </div>
 
       <div className="flex mt-10 mb-5 justify-center lg:justify-start text-xl">
@@ -66,6 +63,7 @@ const Card = () => {
       <ListOperator
         className="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5"
         searchResult={searchResult}
+        filtered={filtered}
         limit={limit}
       />
       <div className="flex justify-center">
