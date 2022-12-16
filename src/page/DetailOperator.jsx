@@ -36,19 +36,16 @@ const DetailOperator = () => {
   return (
     <div className="mx-5 lg:mx-20 mt-10">
       <div>
-        <div
-          id="arknightslogo"
-          className="flex relative lg:fixed mt-5 mb-10 top-2 items-center justify-center lg:justify-start"
-        >
+        <div className="flex justify-center">
           <img
-            className="w-auto h-24"
+            className="w-auto h-16"
             src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
             alt="Arknights_White_Logo"
           />
         </div>
         <Link to="/detail">
           <div className="flex fixed mb-10 bottom-2">
-            <p className="text-center text-lg lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+            <p className="text-center text-lg lg:text-xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
               {"< "}Kembali
             </p>
           </div>

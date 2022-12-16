@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getData } from "../api/axios";
 import Search from "../components/Search";
 import ListOperator from "../components/ListOperator";
+import Sort from "../components/Sort";
 import Filter from "../components/Filter";
 
 const Card = () => {
@@ -37,27 +38,37 @@ const Card = () => {
         />
       </div>
       <div className="flex flex-col lg:flex-row my-10 justify-center">
-        <Link to="/choosemenu">
-          <p
-            className="text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]"
-            title="Kembali"
-            id="kembali"
-          >
-            {"< "}
-          </p>
-        </Link>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <Search state={state} setSearchResults={setSearchResults} />
+        <div className="flex flex-row items-center justify-center">
+          <Link to="/choosemenu">
+            <p
+              className="text-center text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]"
+              title="Kembali"
+              id="kembali"
+            >
+              {"< "}
+            </p>
+          </Link>
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <Search state={state} setSearchResults={setSearchResults} />
+          </div>
         </div>
         <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
           <p>atau</p>
         </div>
-        <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-          <Search state={state} setSearchResults={setSearchResults} />
+        <div className="flex flex-row items-center justify-center">
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <Filter />
+          </div>
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <p>atau</p>
+          </div>
+          <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
+            <Sort />
+          </div>
         </div>
       </div>
 
-      <div className="flex mt-10 mb-5 justify-center lg:justify-start text-xl">
+      <div className="flex mt-10 mb-5 justify-center text-xl">
         <p>Newest Operator</p>
       </div>
       <ListOperator
