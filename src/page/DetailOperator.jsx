@@ -74,63 +74,63 @@ const DetailOperator = () => {
                       <p>{op.description}</p>
                       <p>{op.biography}</p>
                       <br />
-                      <p>Lore :</p>
-                      <p>{op.lore.Gender}</p>
-                      <p>{op.lore[`Place of Birth`]}</p>
-                      <p>{op.lore.Birthday}</p>
-                      <p>{op.lore.Race}</p>
-                      <p>{op.lore.Height}</p>
-                      <p>{op.lore[`Combat Experience`]}</p>
-                      <p>{op.lore[`Infection Status`]}</p>
-                      <p>{op.lore[`Physical Strength`]}</p>
-                      <p>{op.lore[`Physiological Endurance`]}</p>
-                      <p>{op.lore[`Tactical Planning`]}</p>
-                      <p>{op.lore[`Combat Skill`]}</p>
-                      <p>{op.lore[`Originium Adaptability`]}</p>
-                      <br />
-                      <p>Statistics :</p>
+                      <p className="text-2xl">Lore</p>
+                      <p>Gender : {op.lore.Gender}</p>
+                      <p>Birth : {op.lore[`Place of Birth`]}</p>
+                      <p>Birthday : {op.lore.Birthday}</p>
+                      <p>Race : {op.lore.Race}</p>
+                      <p>Height : {op.lore.Height}</p>
+                      <p>Combat Experience : {op.lore[`Combat Experience`]}</p>
+                      <p>Infection : {op.lore[`Infection Status`]}</p>
+                      <p>Physical Strength{op.lore[`Physical Strength`]}</p>
+                      <p>Physiological Endurance : {op.lore[`Physiological Endurance`]}</p>
+                      <p>Tactical Planning : {op.lore[`Tactical Planning`]}</p>
+                      <p>Combat Skill : {op.lore[`Combat Skill`]}</p>
+                      <p>Originium Adaptability : {op.lore[`Originium Adaptability`]}</p>
+                      <br/>
+                      <p className="text-2xl">Statistics :</p>
                       <p>Base</p>
-                      <p>{op.statistics.base.hp}</p>
-                      <p>{op.statistics.base.atk}</p>
-                      <p>{op.statistics.base.def}</p>
-                      <p>{op.statistics.base.resist}</p>
-                      <p>{op.statistics.base.redeploy}</p>
-                      <p>{op.statistics.base.cost}</p>
-                      <p>{op.statistics.base.block}</p>
-                      <p>{op.statistics.base.interval}</p>
+                      <p>HP  : {op.statistics.base.hp}</p>
+                      <p>ATK : {op.statistics.base.atk}</p>
+                      <p>DEF : {op.statistics.base.def}</p>
+                      <p>RESIST : {op.statistics.base.resist}</p>
+                      <p>REDEPLOY : {op.statistics.base.redeploy}</p>
+                      <p>COST : {op.statistics.base.cost}</p>
+                      <p>BLOCK : {op.statistics.base.block}</p>
+                      <p>INTERVAL : {op.statistics.base.interval}</p>
                       <br />
-                      <p>E0</p>
-                      <p>{op.statistics.e0max.hp}</p>
-                      <p>{op.statistics.e0max.atk}</p>
-                      <p>{op.statistics.e0max.def}</p>
-                      <p>{op.statistics.e0max.resist}</p>
-                      <p>{op.statistics.e0max.redeploy}</p>
-                      <p>{op.statistics.e0max.cost}</p>
-                      <p>{op.statistics.e0max.block}</p>
-                      <p>{op.statistics.e0max.interval}</p>
+                      <p className="text-2xl">E0</p>
+                      <p>HP : {op.statistics.e0max.hp}</p>
+                      <p>ATK :{op.statistics.e0max.atk}</p>
+                      <p>DEF :{op.statistics.e0max.def}</p>
+                      <p>RESIST :{op.statistics.e0max.resist}</p>
+                      <p>REDPLOY : {op.statistics.e0max.redeploy}</p>
+                      <p>COST : {op.statistics.e0max.cost}</p>
+                      <p>BLOCK : {op.statistics.e0max.block}</p>
+                      <p>INTERVAL : {op.statistics.e0max.interval}</p>
                       <br />
-                      <p>E1</p>
-                      <p>{op.statistics.e1max.hp}</p>
-                      <p>{op.statistics.e1max.atk}</p>
-                      <p>{op.statistics.e1max.def}</p>
-                      <p>{op.statistics.e1max.resist}</p>
-                      <p>{op.statistics.e1max.redeploy}</p>
-                      <p>{op.statistics.e1max.cost}</p>
-                      <p>{op.statistics.e1max.block}</p>
-                      <p>{op.statistics.e1max.interval}</p>
+                      <p className="text-2xl">E1</p>
+                      <p>HP : {op.statistics.e1max.hp}</p>
+                      <p>ATK : {op.statistics.e1max.atk}</p>
+                      <p>DEF : {op.statistics.e1max.def}</p>
+                      <p>RESIST : {op.statistics.e1max.resist}</p>
+                      <p>DEPLOY : {op.statistics.e1max.redeploy}</p>
+                      <p>COST : {op.statistics.e1max.cost}</p>
+                      <p>BLOCK : {op.statistics.e1max.block}</p>
+                      <p>INTERVAL : {op.statistics.e1max.interval}</p>
                       <br />
                       <p>E2</p>
-                      <p>{op.statistics.e2max.hp}</p>
-                      <p>{op.statistics.e2max.atk}</p>
-                      <p>{op.statistics.e2max.def}</p>
-                      <p>{op.statistics.e2max.resist}</p>
-                      <p>{op.statistics.e2max.redeploy}</p>
-                      <p>{op.statistics.e2max.cost}</p>
-                      <p>{op.statistics.e2max.block}</p>
-                      <p>{op.statistics.e2max.interval}</p>
+                      <p>HP : {op.statistics.e2max.hp}</p>
+                      <p>ATK : {op.statistics.e2max.atk}</p>
+                      <p>DEF : {op.statistics.e2max.def}</p>
+                      <p>RESIST : {op.statistics.e2max.resist}</p>
+                      <p>REDPLOY : {op.statistics.e2max.redeploy}</p>
+                      <p>COST : {op.statistics.e2max.cost}</p>
+                      <p>BLOCK : {op.statistics.e2max.block}</p>
+                      <p>INTERVAL : {op.statistics.e2max.interval}</p>
                       <br />
                       <div id="talents">
-                        <p>Talent :</p>
+                        <p className="text-2xl">Talent :</p>
                         {op.talents.map((talent) => {
                           return (
                             <div>
@@ -151,7 +151,7 @@ const DetailOperator = () => {
                       <br />
                     </div>
                     <div id="availability">
-                      <p>Availablity in :</p>
+                      <p className="text-2xl">Availablity in :</p>
                       <p>Server : {op.availability}</p>
                       <p>Headhunting : {op.headhunting}</p>
                       <p>Recruitable : {op.recruitable}</p>
