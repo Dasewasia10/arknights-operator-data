@@ -69,10 +69,10 @@ const DetailOperator = () => {
                       </div>
                     </div>
                     <div id="main-data">
-                      <p>"{op.quote}"</p>
-                      <p>{op.artist}</p>
-                      <p>{op.description}</p>
-                      <p>{op.biography}</p>
+                      <p>Quote : "{op.quote}"</p>
+                      <p>Artist : {op.artist}</p>
+                      <p>Description : {op.description}</p>
+                      <p>Biography : {op.biography}</p>
                       <br />
                       <p className="text-2xl">Lore</p>
                       <p>Gender : {op.lore.Gender}</p>
@@ -83,51 +83,87 @@ const DetailOperator = () => {
                       <p>Combat Experience : {op.lore[`Combat Experience`]}</p>
                       <p>Infection : {op.lore[`Infection Status`]}</p>
                       <p>Physical Strength{op.lore[`Physical Strength`]}</p>
-                      <p>Physiological Endurance : {op.lore[`Physiological Endurance`]}</p>
+                      <p>
+                        Physiological Endurance :{" "}
+                        {op.lore[`Physiological Endurance`]}
+                      </p>
                       <p>Tactical Planning : {op.lore[`Tactical Planning`]}</p>
                       <p>Combat Skill : {op.lore[`Combat Skill`]}</p>
-                      <p>Originium Adaptability : {op.lore[`Originium Adaptability`]}</p>
-                      <br/>
+                      <p>
+                        Originium Adaptability :{" "}
+                        {op.lore[`Originium Adaptability`]}
+                      </p>
+                      <br />
                       <p className="text-2xl">Statistics :</p>
-                      <p>Base</p>
-                      <p>HP  : {op.statistics.base.hp}</p>
-                      <p>ATK : {op.statistics.base.atk}</p>
-                      <p>DEF : {op.statistics.base.def}</p>
-                      <p>RESIST : {op.statistics.base.resist}</p>
-                      <p>REDEPLOY : {op.statistics.base.redeploy}</p>
-                      <p>COST : {op.statistics.base.cost}</p>
-                      <p>BLOCK : {op.statistics.base.block}</p>
-                      <p>INTERVAL : {op.statistics.base.interval}</p>
-                      <br />
-                      <p className="text-2xl">E0</p>
-                      <p>HP : {op.statistics.e0max.hp}</p>
-                      <p>ATK :{op.statistics.e0max.atk}</p>
-                      <p>DEF :{op.statistics.e0max.def}</p>
-                      <p>RESIST :{op.statistics.e0max.resist}</p>
-                      <p>REDPLOY : {op.statistics.e0max.redeploy}</p>
-                      <p>COST : {op.statistics.e0max.cost}</p>
-                      <p>BLOCK : {op.statistics.e0max.block}</p>
-                      <p>INTERVAL : {op.statistics.e0max.interval}</p>
-                      <br />
-                      <p className="text-2xl">E1</p>
-                      <p>HP : {op.statistics.e1max.hp}</p>
-                      <p>ATK : {op.statistics.e1max.atk}</p>
-                      <p>DEF : {op.statistics.e1max.def}</p>
-                      <p>RESIST : {op.statistics.e1max.resist}</p>
-                      <p>DEPLOY : {op.statistics.e1max.redeploy}</p>
-                      <p>COST : {op.statistics.e1max.cost}</p>
-                      <p>BLOCK : {op.statistics.e1max.block}</p>
-                      <p>INTERVAL : {op.statistics.e1max.interval}</p>
-                      <br />
-                      <p>E2</p>
-                      <p>HP : {op.statistics.e2max.hp}</p>
-                      <p>ATK : {op.statistics.e2max.atk}</p>
-                      <p>DEF : {op.statistics.e2max.def}</p>
-                      <p>RESIST : {op.statistics.e2max.resist}</p>
-                      <p>REDPLOY : {op.statistics.e2max.redeploy}</p>
-                      <p>COST : {op.statistics.e2max.cost}</p>
-                      <p>BLOCK : {op.statistics.e2max.block}</p>
-                      <p>INTERVAL : {op.statistics.e2max.interval}</p>
+                      <table className="bg-white text-gray-900 border-separate w-full shadow-none">
+                        <thead>
+                          <tr>
+                            <th className="p-2 w-auto">#</th>
+                            <th className="p-2 w-auto">Base</th>
+                            <th className="p-2 w-auto">E0</th>
+                            <th className="p-2 w-auto">E1</th>
+                            <th className="p-2 w-auto">E2</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="">
+                            <td className="p-2 w-auto">HP</td>
+                            <td className="p-2 w-auto">{op.statistics.base.hp}</td>
+                            <td className="p-2 w-auto">{op.statistics.e0max.hp}</td>
+                            <td className="p-2 w-auto">{op.statistics.e1max.hp}</td>
+                            <td className="p-2 w-auto">{op.statistics.e2max.hp}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2 w-auto">ATK</td>
+                            <td className="p-2 w-auto">{op.statistics.base.atk}</td>
+                            <td className="p-2 w-auto">{op.statistics.e0max.atk}</td>
+                            <td className="p-2 w-auto">{op.statistics.e1max.atk}</td>
+                            <td className="p-2 w-auto">{op.statistics.e2max.atk}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2 w-auto">DEF</td>
+                            <td className="p-2 w-auto">{op.statistics.base.def}</td>
+                            <td className="p-2 w-auto">{op.statistics.e0max.def}</td>
+                            <td className="p-2 w-auto">{op.statistics.e1max.def}</td>
+                            <td className="p-2 w-auto">{op.statistics.e2max.def}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2 w-auto">RESIST</td>
+                            <td className="p-2 w-auto">{op.statistics.base.resist}</td>
+                            <td className="p-2 w-auto">{op.statistics.e0max.resist}</td>
+                            <td className="p-2 w-auto">{op.statistics.e1max.resist}</td>
+                            <td className="p-2 w-auto">{op.statistics.e2max.resist}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2 w-auto">REDEPLOY</td>
+                            <td className="p-2 w-auto">{op.statistics.base.redeploy}</td>
+                            <td className="p-2 w-auto">{op.statistics.e0max.redeploy}</td>
+                            <td className="p-2 w-auto">{op.statistics.e1max.redeploy}</td>
+                            <td className="p-2 w-auto">{op.statistics.e2max.redeploy}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2">COST</td>
+                            <td className="p-2">{op.statistics.base.cost}</td>
+                            <td className="p-2">{op.statistics.e0max.cost}</td>
+                            <td className="p-2">{op.statistics.e1max.cost}</td>
+                            <td className="p-2">{op.statistics.e2max.cost}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2">BLOCK</td>
+                            <td className="p-2">{op.statistics.base.block}</td>
+                            <td className="p-2">{op.statistics.e0max.block}</td>
+                            <td className="p-2">{op.statistics.e1max.block}</td>
+                            <td className="p-2">{op.statistics.e2max.block}</td>
+                          </tr>
+                          <tr className="">
+                            <td className="p-2">INTERVAL</td>
+                            <td className="p-2">{op.statistics.base.interval}</td>
+                            <td className="p-2">{op.statistics.e0max.interval}</td>
+                            <td className="p-2">{op.statistics.e1max.interval}</td>
+                            <td className="p-2">{op.statistics.e2max.interval}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                       <br />
                       <div id="talents">
                         <p className="text-2xl">Talent :</p>
