@@ -20,21 +20,18 @@ const SkinOperator = () => {
   console.log(operator);
 
   return (
-    <div className="mx-20 my-10">
+    <div className="mx-10 my-10">
       <div>
-        <div
-          id="arknightslogo"
-          className="flex relative lg:fixed mt-5 mb-10 top-2 items-center justify-center lg:justify-start"
-        >
+        <div className="flex justify-center">
           <img
-            className="w-auto h-24"
+            className="w-auto h-16"
             src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
             alt="Arknights_White_Logo"
           />
         </div>
-        <Link to="/detail">
-          <div className="flex fixed mb-10 bottom-2">
-            <p className="text-center text-lg lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+        <Link to="/gallery">
+          <div className="flex fixed top-20 left-20">
+            <p className="text-center text-lg lg:text-xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
               {"< "}Kembali
             </p>
           </div>
@@ -43,28 +40,24 @@ const SkinOperator = () => {
           operator.map((op) => {
             if (op._id === id) {
               return (
-                <div className="relative grid overflow-hidden grid-cols-2 auto-rows-auto gap-5 top-1/2 left-0 right-0">
-                  <div
-                    id="opskin"
-                    className="flex flex-col items-center justify-center"
-                  >
+                <div
+                  id="opskin"
+                  className="flex h-screen w-full justify-center"
+                >
+                  <div className="absolute grid grid-cols-3 grid-rows-auto gap-4 mt-32 w-auto h-auto">
                     {Object.entries(op.art).map(([key, value]) => {
                       return (
-                        <div className="flex flex-row">
-                          <div className="flex absolute text-center text-lg lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
-                            <a href={value}>
-                              <p>{key}</p>
-                            </a>
-                            <br />
-                          </div>
-                          <div className="">
-                            <img
-                              className="w-96 h-auto"
-                              key={key}
-                              src={value}
-                              alt="artBase"
-                            />
-                          </div>
+                        <div className="text-center text-xl lg:text-2xl bg-[#010440] p-2 rounded-xl border-2 border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#010440] hover:border-[#010440]">
+                          <a href={value}>
+                            <p>{key}</p>
+                          </a>
+                          <br />
+                          <img
+                            className="w-80 h-auto"
+                            key={key}
+                            src={value}
+                            alt="artBase"
+                          />
                         </div>
                       );
                     })}
