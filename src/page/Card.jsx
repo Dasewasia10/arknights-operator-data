@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { getData } from "../api/axios";
 import Search from "../components/Search";
 import ListOperator from "../components/ListOperator";
-import Sort from "../components/Sort";
-import Filter from "../components/Filter";
+import SortDropdown from "../components/SortDropdown";
+import FilterDropdown from "../components/FilterDropdown";
 
 const Card = () => {
   const [state, setState] = useState([]);
   const [searchResult, setSearchResults] = useState([]);
   const [limit, setLimit] = useState(10);
+  const [sortResults, setSortResults] = useState([])
+  const [filterResults, setFilterResults] = useState([]);
 
   const showMoreCards = () => {
     setLimit((prevValue) => prevValue + 10);
@@ -23,6 +25,12 @@ const Card = () => {
       })
       .then((json) => {
         setSearchResults(json);
+      })
+      .then((json) => {
+        setSortResults(json);
+      })
+      .then((json) => {
+        setFilterResults(json);
       });
   }, []);
 
@@ -55,13 +63,13 @@ const Card = () => {
         </div>
         <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center">
           <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-            <Filter />
+            <FilterDropdown state={state} setSortResults={setSortResults} />
           </div>
           <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
             <p>atau</p>
           </div>
           <div className="flex ml-0 mt-3 lg:mt-0 lg:ml-5 items-center justify-center">
-            <Sort />
+            <SortDropdown state={state} setFilterResults={setFilterResults} />
           </div>
         </div>
       </div>
@@ -69,6 +77,8 @@ const Card = () => {
       <ListOperator
         className="my-10 flex flex-row flex-wrap justify-center items-center overflow-hidden grid-lines sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-5"
         searchResult={searchResult}
+        sortResults={sortResults}
+        filterResults={filterResults}
         limit={limit}
       />
       <div className="flex justify-center">
