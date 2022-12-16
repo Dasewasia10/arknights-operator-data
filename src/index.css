@@ -16,9 +16,9 @@
 
 .dropdownItem {
   @apply block 
-  text-sm
   py-2 
   px-4 
+  text-[#D9D9D9]
   bg-[#0D0D0D]
   hover:bg-gray-100
   hover:text-[#0D0D0D];
