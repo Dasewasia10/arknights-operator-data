@@ -19,3 +19,40 @@ Feature on plan :
 - Fetch Data (like information about Operator)
 - Sorting
 ~- Favorite~
+
+Project Tree (not include .git and .gitignore)
+```
+ArKnights-Operator-Data
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.cjs
+├─ public
+│  └─ vite.svg
+├─ README.md
+├─ src
+│  ├─ api
+│  │  └─ axios.jsx
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ assets
+│  │  └─ Rhodes_Island.svg
+│  ├─ components
+│  │  ├─ DetailCard.jsx
+│  │  ├─ FilterDropdown.jsx
+│  │  ├─ ListOperator.jsx
+│  │  ├─ Search.jsx
+│  │  └─ SortDropdown.jsx
+│  ├─ index.css
+│  ├─ main.jsx
+│  ├─ output.css
+│  └─ page
+│     ├─ Card.jsx
+│     ├─ ChooseMenu.jsx
+│     ├─ DetailOperator.jsx
+│     ├─ First.jsx
+│     └─ SkinOperator.jsx
+├─ tailwind.config.cjs
+└─ vite.config.js
+
+```
